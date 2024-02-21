@@ -1,0 +1,32 @@
+#main1{
+    display: block;
+    margin: 60px 20px 20px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 600px;
+    position: relative;
+}
+.user-information{
+    display: block;
+    margin-top: 2%;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 90%;
+    width: 30%;
+    position:absolute;
+    right: 2%;
+}
+.input1{
+    margin: 10px;
+}
+.booking-information img{
+    display: block;
+    margin-top: 2%;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 90%;
+    width: 60%;
+    position:absolute;
+    left: 2%;
+    
+}

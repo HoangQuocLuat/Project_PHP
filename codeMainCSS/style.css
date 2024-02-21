@@ -1,0 +1,297 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:helvetica,arial,sans-serif;
+}
+/* start: nav*/
+/*css cho thằng tổng quát header*/
+#header {
+    height: 50px;
+    background-color:#c69155;
+
+    /*cách để căn các phần tử*/
+    display:flex;
+    justify-content:space-around;
+
+    /*cách để bám dính trên top và có độ dài là 100pt*/
+    z-index: 1;
+    position: fixed;
+    top : 0px;
+    left : 0px;
+    right: 0px;
+}
+/*đưa các thành phần Home, album....lên 1 hàng ngang*/
+#nav li {
+    display: inline-block;
+    position: relative;/*làm bố của #nav .subnav*/
+}
+#nav .subnav {
+    position:absolute;/*làm con*/
+/*    background-color: white;/* css cho khung được hover*/
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);/* css cho khung được hover*/
+    display:none;/* css cho khung được hover*/
+}
+
+/*bật lên sau khi được hover vào*/
+#nav li:hover .subnav{
+    display:block;
+}
+
+/* xóa gạch chân và màu chữ xanh( sửa đổi chữ )*/
+#nav li a {
+    text-decoration:none;/*bỏ gạch chân*/
+    color:black;
+    line-height:50px;/*căn giữa cho chữ*/
+    padding:0px 26px;
+    display: block;
+    font-size:25px;
+    border-radius: 20px;
+}
+/*thiết kế khi được hover vào và chỉ ảnh hưởng đến cấp 1*/
+#nav>li:hover>a {
+    color:black ;
+    background-color:wheat;
+}
+/*css cho phần tử menu, blog khi được hover*/
+#nav .subnav li:hover{
+    color:black ;
+    background-color:wheat;
+}
+/*màu chữ sau khi được hover*/
+#nav .subnav a {
+    color:black;
+}
+/*mở hết cỡ phần ngang cho thằng li*/
+#nav li ul li{
+    display:block;
+    border-radius: 20px
+}
+#nav li ul li a{
+    display:block;
+}
+/*thu ngắn nav*/
+#nav{
+    display:inline-block;
+}
+/* end: nav==============================*/
+/*logo*/
+#header #logo img{
+    border-radius:20px;
+}
+/*start button*/
+#header #button div{
+   display: inline-block;
+   padding:10px;
+}
+/*end button*/
+
+/* end header========*/
+
+
+/*start slider*/
+/*thiết kế hiệu ứng*/
+#khoiin{
+    width: 400px;
+	height: 50px;
+	padding: 5px 10px;
+	text-align: center;
+	box-sizing: border-box;
+	color: #2b0321;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+
+	font-size: 40px;
+	font-family: Script;
+	animation: chuChay 2s forwards;
+	animation-delay: 1s;
+	opacity: 0;
+}
+@-webkit-keyframes zoom{
+	from{
+		transform: scale(1);
+	}
+	to{
+		transform: scale(1.5); 
+		
+	}
+}
+
+@-webkit-keyframes chuChay{
+	from{
+		opacity: 0;
+		margin-left: -500px;
+	}
+	to{
+		opacity: 1;
+		margin-left: -200px;
+	}
+}
+/*end hiệu ứng*/
+#content{
+    display:block;
+}
+div#sliderr {
+    padding-top: 50%;
+    background: url(../img/slider.jpg) center /cover no-repeat;
+}
+#sliderr .text-content{  
+    bottom: 0;
+    color:black;
+    text-align: center;
+    text-decoration: none;
+}
+#sliderr .text-heading{
+    font-size:40px;
+    margin-left:20px;
+    margin-bottom:15px;
+    text-decoration: none;
+}
+#sliderr .text-description{
+    font-size:30px;
+    text-decoration: none;
+}
+
+/*introduce*/
+#content .content-section{
+    width:800px;
+    padding:64px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+    opacity:0.6;
+    
+}
+
+#content .section-sub-heading{
+    font-size:20px;
+    margin-top:25px;
+    text-align: center;
+    font-style:italic;
+    opacity:0.9;
+    color:#f8e0ae;
+}
+#content .about-text{
+    margin-top:25px;
+    text-align: justify;
+    line-height: 1.6;  
+}
+#content .member-list{
+    margin-top:48px;
+    display: flex;   
+}
+.member-name{
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.member-list .member-item img{
+    padding:30px;
+}
+/*menu*/
+#menu{
+    background-color:#f8e0ae;
+}
+#menu .menu-section{
+    width:1000px;
+    padding:64px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.timeline-item{
+    margin:20px;
+    display:flex;
+
+}
+.timeline-vidieo{
+}
+.timeline-text{
+    flex:2;
+    text-align:center;
+    line-height:1.6;
+    margin-top:100px;
+    font-size:20px;
+}
+.timeline-img{
+    width:400px;
+    height:400px;
+    background-size: contain;
+    background-position: top right;
+    border-radius:20px;
+}
+.dichuyenanh{
+    order:2;
+}
+.dichuyenchu{
+    order:1
+}
+.space{
+    padding-bottom: 50px;
+}
+/*album*/
+#album{
+    background-color:rgb(240, 242, 247);
+    margin-top:0px;
+}
+.img{
+    width:600px;
+    height:700px;
+    border-radius:20px;
+    margin:20px;
+}
+.allimg{
+    weight:100px;
+    margin-right: 0px;
+    display:flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+/*Feedback*/
+.feed{
+    width: 100%;
+    background-color:#f8e0ae;
+}
+
+/*footer*/
+#footer{
+    background-image: linear-gradient(rgb(240, 242, 247),#f8e0ae 100%);
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+}
+.General{
+   display: flex;
+   justify-content: space-around;
+}
+
+ 
+.mxh{
+    display: flex;
+}
+.Facebook{
+  margin-right: 75px;
+}
+
+.Tiktok{
+  
+ margin-left: 75px;
+
+}
+.qrcode{
+    width: 210px;
+    margin-left: 72px;
+   
+}
+.qrcode-img{
+    width: 100%;
+    height: 210px;
+}

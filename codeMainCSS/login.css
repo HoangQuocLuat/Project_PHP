@@ -1,0 +1,41 @@
+
+  /*thiết kế cả khung login*/
+  #login {
+    background: url('../img/slider.jpg') center;
+  display: flex;
+  justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    padding: 10px 30px 30px;
+    border-radius: 10px;
+    height: 700px;
+    position: relative;
+  }
+  .login-heading{
+    position:absolute;
+    color: rgb(71, 46, 13);
+    top:25%;
+  }
+  #login form{
+    position:absolute;
+    top:35%;
+  }
+  /*thiết kế input*/
+  #login input {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    height: 45px;
+    width: 100%;
+    border: 1px solid #0093ab;
+    border-radius: 10px;
+  }
+
+  #login #btn {
+    padding: 8px 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    transition: all 0.2s linear;/*độ trễ khi hover*/
+  }
+  #btn:hover {
+    transform: scale(1.1);
+  }

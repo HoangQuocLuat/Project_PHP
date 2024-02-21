@@ -1,0 +1,12 @@
+#title-admin{
+    text-align: center;
+    color:blue;
+}
+#wrap_list ul{
+    display: flex;
+    justify-content: space-around;
+}
+table tr th {
+    border: 3px solid red;
+    
+}
